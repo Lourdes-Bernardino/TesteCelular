@@ -1,6 +1,6 @@
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-import pytest
+
 
 caps = {}
 caps["platformName"] = "Android"
@@ -19,7 +19,7 @@ caps["appium:connectHardwareKeyboard"] = True
 
 if __name__ == '__main__':  # aciona o script
 
-    # def testar_somar_dois_numeros():
+
 
     # conexao com o saucelabs, aponta para datacenter, meu usuario e chave (ocultos)
     driver = webdriver.Remote("segredo", caps)
@@ -35,7 +35,7 @@ if __name__ == '__main__':  # aciona o script
     botao_8.click()
     botao_soma = driver.find_element(AppiumBy.ACCESSIBILITY_ID, 'plus')
     botao_soma.click()
-    botao_5 = driver.find_element(AppiumBy.ACCESSIBILITY_ID, '5')
+    botao_5 = driver.find_element(AppiumBy.ACCESSIBILITY_ID, '4')
     botao_5.click()
     botao_igual = driver.find_element(AppiumBy.ACCESSIBILITY_ID, 'equals')
     botao_igual.click()
@@ -43,6 +43,9 @@ if __name__ == '__main__':  # aciona o script
 
     print(f'Resultado final = {resultado_final.text} \n Resultado esperado = {resultado_esperado}')
 
+
     assert resultado_final.text == resultado_esperado
 
     driver.quit()
+
+#esse teste não passa. feito só pra ver como roda com erro no saucelabs.
