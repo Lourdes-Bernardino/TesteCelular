@@ -19,7 +19,7 @@ caps["appium:connectHardwareKeyboard"] = True
 
 if __name__ == '__main__': #aciona o script
 
-    driver = webdriver.Remote("https://jessicav:2e5baf84-44d4-46bc-ac27-f191c5bff9fa@ondemand.us-west-1.saucelabs.com:443/wd/hub", caps)
+    driver = webdriver.Remote("segredo", caps)
 
 # o script gerado automaticamente pelo appium não funcionou como demonstrado no vídeo pelo professor.
 # revirei na internet e descobri que a sintaxe mudou um pouco
